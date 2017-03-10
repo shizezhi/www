@@ -1,0 +1,31 @@
+安装git成功后，需要做一些设置标识：
+$git config --global user.name "shizezhi"
+$git config --global user.email "945449645@qq.com"
+
+第一类：（本地仓库）
+1、进入gitbash。
+2、进入指定文件夹内建立仓库（也即是初始化git），完成后
+   该文件夹内会自动生成.git文件（默认是隐藏的，可能
+   需要设置文件夹选项）。
+   $ git init
+3、要上传的文件放在.git文件同一个目录下。
+4、目录不变的情况下，输入
+   $git add  上传的文件名（加后缀名） 
+   即把文件添加到暂存区
+5、把文件提交到git仓库
+   $git commit -m "注释"
+
+第二类：（远程仓库）
+1、注册github账号
+2、创建SSH key
+   1)在c盘用户目录下，看看是否有.ssh目录。
+   2）如果有，跳过这一步；如果没有，打开命令行
+     $ssh-keygen -t rsa -C "邮箱地址"
+     按三个回车
+3、找到.ssh目录下的id_rsa.pub文件，复制里面的代码
+4、打开GitHub，进入setting中的SSH keys页面，然后点击“Add SSH key”
+   填上title（任意），粘贴刚才的代码，确认即可。
+5、添加远程库
+6、在本地仓库目录下运行：
+   $git remote add origin http地址（github中复制）
+   $ git push -u origin master (推送到云端)
