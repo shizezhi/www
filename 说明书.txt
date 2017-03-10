@@ -1,3 +1,4 @@
+           安装说明书
 安装git成功后，需要做一些设置标识：
 $git config --global user.name "shizezhi"
 $git config --global user.email "945449645@qq.com"
